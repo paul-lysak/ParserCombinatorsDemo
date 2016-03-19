@@ -55,7 +55,7 @@ class EvaluationSpec extends WordSpec with MustMatchers{
   }
 
   def testByTable(exprStr: String, table: Seq[(Map[String, Boolean], Boolean)]): Unit = {
-    val expr = Parser.parse(exprStr)
+    val expr = BooleanExpressionParser.parse(exprStr)
     val out = for((in, expectedOut) <- table) yield {
       val actualOut = expr.evaluate(in)
       (actualOut, expectedOut)

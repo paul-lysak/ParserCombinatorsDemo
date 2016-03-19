@@ -5,7 +5,7 @@ import scala.util.parsing.combinator.JavaTokenParsers
 /**
   * Created by Paul Lysak on 19.03.16.
   */
-object Parser extends JavaTokenParsers {
+object BooleanExpressionParser extends JavaTokenParsers {
   import Ast._
 
   def parse(str: String): Ast.Expression =
